@@ -1,7 +1,41 @@
 <template>
 <div class="flex flex-col items-center justify-center min-h-screen p-4 bg-black lg:p-10">
     <!-- <WidgetsRollingCards></WidgetsRollingCards> -->
-    <div class="flex items-center justify-center ">
+    <!-- <div class="flex items-center justify-center h-72"> -->
+
+        <div class="relative w-full max-w-lg h-72">
+            <div class="absolute top-0 w-48 h-48 bg-purple-400 rounded-full left-24 filter blur-2xl animate-blob "></div>
+            <div class="absolute top-0 w-48 h-48 bg-yellow-400 rounded-full right-24 filter blur-2xl animate-blob animation-delay-2000"></div>
+            <div class="absolute w-48 h-48 bg-blue-400 rounded-full -bottom-0.5 left-36  filter blur-2xl  animate-blob animation-delay-4000"></div>
+            <div class="relative m-8 space-y-4">
+                <div class="flex items-center justify-between p-5 space-x-8 bg-white rounded-lg">
+                    <div class="flex-1">
+                        <div class="w-48 h-4 bg-gray-300 rounded"></div>
+                    </div>
+                    <div>
+                        <div class="w-24 h-6 bg-purple-300 rounded-lg"></div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between p-5 space-x-8 bg-white rounded-lg">
+                    <div class="flex-1">
+                        <div class="w-56 h-4 bg-gray-300 rounded"></div>
+                    </div>
+                    <div>
+                        <div class="w-20 h-6 bg-yellow-300 rounded-lg"></div>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between p-5 space-x-8 bg-white rounded-lg">
+                    <div class="flex-1">
+                        <div class="h-4 bg-gray-300 rounded w-44"></div>
+                    </div>
+                    <div>
+                        <div class="h-6 bg-pink-300 rounded-lg w-28"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- </div> -->
+    <div class="relative flex items-center justify-center ">
         <button class="relative text-xl font-thin">
             <div class="absolute inset-x-0 h-full border rounded-lg bg-grey-100 border-grey-100 -bottom-1"></div>
             <div class="relative px-10 py-4 transition duration-500 transform bg-gray-100 border border-gray-500 rounded-lg hover:translate-y-1">click Me</div>
