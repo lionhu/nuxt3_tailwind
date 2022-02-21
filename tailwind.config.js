@@ -34,6 +34,26 @@ module.exports = {
     "./plugins/**/*.{js,ts}",
     // './nuxt.config.{js,ts}',
   ],
+  theme: {
+    extend: {
+      animation: {
+        tilt: "tilt 10s linear infinite",
+      },
+      keyframes: {
+        tilt: {
+          "0%,50%,100%": {
+            transform: "rotate(0deg)",
+          },
+          "25%": {
+            transform: "rotate(3deg)",
+          },
+          "75%": {
+            transform: "rotate(-3deg)",
+          },
+        },
+      },
+    },
+  },
   variants: {
     extend: {},
   },
@@ -43,7 +63,7 @@ module.exports = {
     require("@tailwindcss/aspect-ratio"),
     require("@tailwindcss/line-clamp"),
     require("daisyui"),
-    rotateXY
+    rotateXY,
   ],
   daisyui: {
     themes: [
