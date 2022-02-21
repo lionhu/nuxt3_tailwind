@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.flip-cards .card{
+    @apply max-w-[240px] py-3 bg-green-200
+}
+
+
+.flip-cards .card .front h1{
+    @apply text-center font-bold my-4
+}
+.flip-cards .card .front .description{
+    @apply px-6
+}
+
+
+
+ .card .front, .card .back {
+    @apply flex justify-center items-center
+}
+.icon img{
+    @apply rounded-full content-center
+}
