@@ -36,6 +36,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        wavus: {
+          "DEFAULT": "var(--wavus)",
+          "header": "var(--wavus_header)",
+          "sub": "var(--wavus_sub)",
+        }
+      },
       animation: {
         tilt: "tilt 10s linear infinite",
         blob: "blob 10s infinite",

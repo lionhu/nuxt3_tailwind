@@ -11,7 +11,15 @@
     animation-delay: 4s;
   }
 }
+:root{
+    --wavus:#ff9005;
+    --wavus_header:#995655;
+    --wavus_sub:#ed88df;
+}
 
+.wavus {
+    --wavus:#eeffdd
+}
 
 .flip-cards .card{
     @apply max-w-[240px] py-3 bg-green-200

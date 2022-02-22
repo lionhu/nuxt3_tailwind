@@ -4,9 +4,18 @@
 <template>
 <div>
 
-    <div class="p-4 lg:p-10">
+    <div class="p-4 lg:p-10 root">
         <div>
             <WidgetsFlipCard></WidgetsFlipCard>
+
+      <h1 class="inset-2 bg-wavus">hello wavus</h1>
+      <h1 class="inset-2 bg-wavus-header">hello header</h1>
+      <h2 class="inset-2 bg-wavus-sub">hello sub</h2>
+        </div>
+
+        <div class="wavus">
+            
+      <h1 class="inset-2 bg-wavus">inside socpe variables</h1>
         </div>
     </div>
 </div>
@@ -37,52 +46,52 @@ export default {
 };
 </script>
 <script setup>
-import {
-    reactive,
-    ref
-} from "vue";
-import {
-    CheckboxField,
-    TextField,
-    SelectField,
-} from "@asigloo/vue-dynamic-forms";
+// import {
+//     reactive,
+//     ref
+// } from "vue";
+// import {
+//     CheckboxField,
+//     TextField,
+//     SelectField,
+// } from "@asigloo/vue-dynamic-forms";
 
-import {
-    useUserStore
-} from "@/stores/user";
-import {
-    useCounterStore
-} from "@/stores/counter";
+// import {
+//     useUserStore
+// } from "@/stores/user";
+// import {
+//     useCounterStore
+// } from "@/stores/counter";
 
-const user = useUserStore();
-const counter = useCounterStore(); // Same as useState('color')
-const authUser = useAuthState();
+// const user = useUserStore();
+// const counter = useCounterStore(); // Same as useState('color')
+// const authUser = useAuthState();
 
-const form = reactive({
-    id: "basic-demo",
-    fields: {
-        username: TextField({
-            label: "Username",
-        }),
-        games: SelectField({
-            label: "Games",
-            options: [{
-                    value: "the-last-of-us",
-                    label: "The Last of Us II",
-                },
-                {
-                    value: "death-stranding",
-                    label: "Death Stranding",
-                },
-                {
-                    value: "nier-automata",
-                    label: "Nier Automata",
-                },
-            ],
-        }),
-        checkIfAwesome: CheckboxField({
-            label: "Remember Me",
-        }),
-    },
-});
+// const form = reactive({
+//     id: "basic-demo",
+//     fields: {
+//         username: TextField({
+//             label: "Username",
+//         }),
+//         games: SelectField({
+//             label: "Games",
+//             options: [{
+//                     value: "the-last-of-us",
+//                     label: "The Last of Us II",
+//                 },
+//                 {
+//                     value: "death-stranding",
+//                     label: "Death Stranding",
+//                 },
+//                 {
+//                     value: "nier-automata",
+//                     label: "Nier Automata",
+//                 },
+//             ],
+//         }),
+//         checkIfAwesome: CheckboxField({
+//             label: "Remember Me",
+//         }),
+//     },
+// });
 </script>
