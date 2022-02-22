@@ -13,6 +13,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        texture: `url('https://images.unsplash.com/photo-1531685250784-7569952593d2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1374&q=80')`,
+      },
       colors: {
         wavus: {
           DEFAULT: "var(--wavus)",
@@ -23,7 +26,7 @@ module.exports = {
           //     ? `rgb(var(--wavus_muted),${opacityValue})`
           //     : `rgb(var(--wavus_muted))`;
           // },
-          muted:withOpacity("--wavus_muted")
+          muted: withOpacity("--wavus_muted"),
         },
       },
       animation: {
