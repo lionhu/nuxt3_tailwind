@@ -1,28 +1,5 @@
-const plugin = require('tailwindcss/plugin')
-
-// Rotate X utilities
-const rotateXY = plugin(function ({ addUtilities }) {
-  addUtilities({
-    ".rotate-x-30": {
-      transform: "rotateX(30deg)",
-    },
-    ".rotate-x-60": {
-      transform: "rotateX(60deg)",
-    },
-    ".rotate-x-90": {
-      transform: "rotateX(90deg)",
-    },
-    ".rotate-y-30": {
-      transform: "rotateY(30deg)",
-    },
-    ".rotate-y-60": {
-      transform: "rotateY(60deg)",
-    },
-    ".rotate-y-90": {
-      transform: "rotateY(90deg)",
-    },
-  });
-})
+const { withOpacity } = require("./tailwindcss/functions.js");
+const { rotateXY } = require("./tailwindcss/plugins.js");
 
 
 module.exports = {
@@ -38,10 +15,16 @@ module.exports = {
     extend: {
       colors: {
         wavus: {
-          "DEFAULT": "var(--wavus)",
-          "header": "var(--wavus_header)",
-          "sub": "var(--wavus_sub)",
-        }
+          DEFAULT: "var(--wavus)",
+          header: "var(--wavus_header)",
+          sub: "var(--wavus_sub)",
+          // muted: ({ opacityValue }) => {
+          //   return opacityValue !== undefined
+          //     ? `rgb(var(--wavus_muted),${opacityValue})`
+          //     : `rgb(var(--wavus_muted))`;
+          // },
+          muted:withOpacity("--wavus_muted")
+        },
       },
       animation: {
         tilt: "tilt 10s linear infinite",

@@ -4,13 +4,14 @@
 <template>
 <div>
 
-    <div class="p-4 lg:p-10 root">
+    <div class="p-4 bg-black lg:p-10 root">
         <div>
             <WidgetsFlipCard></WidgetsFlipCard>
 
       <h1 class="inset-2 bg-wavus">hello wavus</h1>
       <h1 class="inset-2 bg-wavus-header">hello header</h1>
       <h2 class="inset-2 bg-wavus-sub">hello sub</h2>
+      <h2 class="inset-2 bg-wavus-muted bg-opacity-70">Muted opacity</h2>
         </div>
 
         <div class="wavus">

@@ -15,6 +15,7 @@
     --wavus:#ff9005;
     --wavus_header:#995655;
     --wavus_sub:#ed88df;
+    --wavus_muted:42, 203, 243;
 }
 
 .wavus {
