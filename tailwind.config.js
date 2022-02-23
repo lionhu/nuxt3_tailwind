@@ -32,8 +32,19 @@ module.exports = {
       animation: {
         tilt: "tilt 10s linear infinite",
         blob: "blob 10s infinite",
+        beat: "beat  1s infinite",
+        wave: "wave  1s infinite",
+        "spin-slow": "spin 2s linear infinite",
       },
       keyframes: {
+        wave: {
+          "0%,100%": { transform: "rotate(-30deg)" },
+          "25%": { transform: "rotate(30deg)" },
+        },
+        beat: {
+          "0%,100%": { transform: "scale(1)" },
+          "25%": { transform: "scale(1.2)" },
+        },
         blob: {
           "0%": {
             transform: "translate(0px, 0px) scale(1)",
@@ -63,7 +74,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      // animation:["hover","group-hover"]
+    },
   },
   plugins: [
     require("@tailwindcss/typography"),
