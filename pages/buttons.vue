@@ -74,6 +74,12 @@
         </div>
     </div>
 </div>
+<div class="flex items-center justify-center w-screen mt-24">
+  <a href="#" class="relative bg-blue-500 text-white px-5 py-2.5 group rounded-lg overflow-hidden">
+    <span class="absolute top-0 left-0 w-64 h-64 mt-12 transition-all duration-300 ease-out bg-blue-700 group-hover:-rotate-45 group-hover:-mt-24"></span>
+    <span class="relative">Button</span>
+  </a>
+</div>
 </div>
 
 </template>
