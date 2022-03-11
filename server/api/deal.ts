@@ -1,7 +1,8 @@
 import type { IncomingMessage, ServerResponse } from "http";
 import axios from 'axios'
 
-const ENDPOINT = "https://api.freee.co.jp/api/1/deals"
+const ENDPOINT =
+  "/store/public/system/store_system_info/";
 const API_HEAD = {
   headers: {
     'Authorization': `Bearer ${process.env.access_token}`,
@@ -12,19 +13,20 @@ const API_HEAD = {
 }
 
 export default async (req: IncomingMessage, res: ServerResponse) => {
-  if (req.method != 'GET') {
-    console.log(req.method)
-    res.statusCode = 448
-    res.end()
-  }
+  // if (req.method != 'GET') {
+  //   console.log(req.method)
+  //   res.statusCode = 448
+  //   res.end()
+  // }
 
   let data: Array<any>
-  await axios.get(
-    `${ENDPOINT}?company_id=${process.env.company_id}&limit=50`, 
+  await axios.post(
+    `${ENDPOINT}`, 
     API_HEAD
   ).then(res => {
-    data = res.data.deals;
+    data = res.data.data.categories;
   });
+
 
   const json = JSON.stringify(data)
   res.statusCode = 200
